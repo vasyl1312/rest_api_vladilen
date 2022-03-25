@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/vasyl1312/rest_api_vladilen#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
