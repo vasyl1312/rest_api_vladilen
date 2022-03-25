@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const {
   v4
-} = require('uuid')
+} = require('uuid') //генерує різні формати id          
 const app = express()
 
 let CONTACTS = [{ //like DataBase
@@ -34,7 +34,7 @@ app.post('/api/contacts', (req, res) => {
 
 // DELETE
 app.delete('/api/contacts/:id', (req, res) => {
-  CONTACTS = CONTACTS.filter(c => c.id !== req.params.id)
+  CONTACTS = CONTACTS.filter(c => c.id !== req.params.id) //видалення контакту не тільки на фронті а й на сервері
   res.status(200).json({
     message: 'Контакт був видалений'
   })

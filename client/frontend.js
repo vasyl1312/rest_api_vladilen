@@ -4,8 +4,8 @@ import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.js
 Vue.component('loader', {
   template: `
     <div style="display: flex;justify-content: center;align-items: center">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
       </div>
     </div>
   `
@@ -44,7 +44,7 @@ new Vue({
       const contact = this.contacts.find(c => c.id === id)
       const updated = await request(`/api/contacts/${id}`, 'PUT', {
         ...contact,
-        marked: true
+        marked: true //відмічений контакт після перезагрузки сторінки щоб був відміченим
       })
       contact.marked = updated.marked
     },

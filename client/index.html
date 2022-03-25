@@ -26,7 +26,7 @@
 
       <form class="form-inline mb-3" @submit.prevent="createContact">
         <div class="form-group mr-5">
-          <label for="name" class="mr-3">Имя</label>
+          <label for="name" class="mr-3">Ім'я</label>
           <input
             type="text"
             class="form-control"
@@ -35,7 +35,7 @@
           />
         </div>
         <div class="form-group mr-5">
-          <label for="value" class="mr-3">Значение</label>
+          <label for="value" class="mr-3">Значення</label>
           <input
             type="text"
             class="form-control"
@@ -44,10 +44,10 @@
           />
         </div>
         <button class="btn btn-primary" type="submit" :disabled="!canCreate">
-          Создать
+          Створити
         </button>
       </form>
-
+      <!-- коли затримка то лодер який з бутстрапу брали -->
       <div v-if="loading">
         <loader />
       </div>
@@ -66,15 +66,15 @@
               @click="markContact(contact.id)"
               :disabled="contact.marked"
             >
-              Отметить
+              Відмітити
             </button>
             <button class="btn btn-danger" @click="removeContact(contact.id)">
-              Удалить
+              Видалити
             </button>
           </div>
         </div>
       </div>
-      <p v-else>Контактов пока нет</p>
+      <p v-else>Контактів поки-що немає</p>
     </div>
 
     <script type="module" src="frontend.js"></script>
